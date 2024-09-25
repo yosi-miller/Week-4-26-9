@@ -5,9 +5,9 @@ from flask import jsonify, request, blueprints
 
 from services.main_server import select_all_with_psycopg2
 
-main = blueprints.Blueprint('main', __name__, url_prefix='/')
+main_bp = blueprints.Blueprint('main', __name__, url_prefix='/')
 
-@main.route('/get')
+@main_bp.route('/get')
 def get_with_psycopg2():
     request_info = {
         "ip": request.remote_addr,
