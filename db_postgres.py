@@ -8,7 +8,7 @@ load_dotenv()
 connection_pool = psycopg2.pool.SimpleConnectionPool(
             minconn=1,
             maxconn=10,
-            dbname="test_week_3",
+            dbname="wwii_missions",
             user=os.getenv('POSTGRES_USER_NAME'),
             password=os.getenv('POSTGRES_PASSWORD'),
             host="localhost",
