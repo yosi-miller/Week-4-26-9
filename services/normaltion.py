@@ -36,6 +36,7 @@ def create_tables(request_info=None):
         query2 = """CREATE TABLE target(
             id SERIAL PRIMARY KEY,
             country_id INT REFERENCES target_country(id),
+            mission_date DATE,
             city CHAR(20),
             target_priority CHAR(20),
             target_latitude CHAR(20),
